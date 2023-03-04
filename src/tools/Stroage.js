@@ -13,9 +13,9 @@ const Store = createStore({
          * @param {*} state 
          * @returns Boolean
          */
-        isLogin: (state) => {
-            return state.userName.length > 0;
-        }
+        // isLogin: (state) => {
+        //     return state.userName.length > 0;
+        // }
     },
     mutations: {
         /**
@@ -25,6 +25,7 @@ const Store = createStore({
         clearUserInfo(state) {
             state.userName = ""
             state.userPassword = ""
+            localStorage.clear()
         },
         /**
          * 注册用户
@@ -32,8 +33,15 @@ const Store = createStore({
          * @param {Object} name && password 
          */
         registerUserInfo(state, {name, password}) {
-            state.userName = name
-            state.userPassword = password
+            let ul = localStorage.getItem("userName")
+            if (ul)  {
+                state.userName = ul
+            } else {
+                state.userName = name
+                state.userPassword = password
+                localStorage.setItem("userName",name)
+            }
+            
         }
     }
 })
