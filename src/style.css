@@ -69,3 +69,22 @@ serif;
 font-family: Menlo, Monaco, Consolas, "Liberation Mono",
 "Courier New", monospace;
 }
+
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #778899;
+    background-clip: padding-box;
+    min-height: 28px;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-track {
+    width: 3px;
+    background-color: #f9f9f9;
+}
