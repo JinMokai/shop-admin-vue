@@ -110,8 +110,8 @@
 </template>
 
 <script>
-import Mock from '../../mock/Mock';
-import Tools from "../../tools/Tools"
+import Mock from '@/mock/Mock';
+import Tools from "@/tools/Tools"
 
 export default {
     name: "Order",

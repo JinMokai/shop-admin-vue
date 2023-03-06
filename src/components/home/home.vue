@@ -2,7 +2,7 @@
     <el-container id="container">
         <el-aside width="250px">
             <el-container id="top">
-                <img style="width:25px;height:25px;margin:auto;margin-right:0;" src="../../assets/logo.png" />
+                <img style="width:25px;height:25px;margin:auto;margin-right:0;" src="@/assets/logo.png" />
 
                 <div style="margin:auto;margin-left:10px;color:#ffffff;font-size:17px">
                     电商后台管理
@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import Storage from "../../tools/Stroage"
+import Storage from "@/tools/Stroage"
 export default {
     name: "Home",
     methods: {

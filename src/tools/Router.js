@@ -1,8 +1,8 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "../components/home/home.vue"
-import Login from "../components/login/login.vue"
-import Order from "../components/order/order.vue"
-import Store from "./Stroage"
+import Home from "@/components/home/home.vue"
+import Login from "@/components/login/login.vue"
+import Order from "@/components/order/order.vue"
+import Store from "@/tools/Stroage"
 import { ElMessage } from "element-plus";
 
 const Router = createRouter({

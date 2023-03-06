@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import Storage from "../../tools/Stroage"
+import Storage from "@/tools/Stroage"
 import { ElMessage } from "element-plus"
 export default {
     name: "Login",
