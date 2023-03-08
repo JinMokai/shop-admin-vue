@@ -2,6 +2,8 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "@/components/home/home.vue"
 import Login from "@/components/login/login.vue"
 import Order from "@/components/order/order.vue"
+import Goods from "@/components/goods/Goods.vue"
+import AddGood from "@/components/goods/AddGood.vue"
 import Store from "@/tools/Stroage"
 import { ElMessage } from "element-plus";
 
@@ -22,6 +24,16 @@ const Router = createRouter({
                     path: 'order/:type', // 0是普通订单,1是秒杀订单
                     component: Order,
                     name: "Order"
+                },
+                {
+                    path: "goods/:type", // 0是普通商品 1是秒杀商品 2是今日推荐
+                    component: Goods,
+                    name: "Goods"
+                },
+                {
+                    path: "addGood/:type",
+                    component: AddGood,
+                    name: "AddGood"
                 }
             ],
             redirect: "/home/order/0"
