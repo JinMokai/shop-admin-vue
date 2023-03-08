@@ -4,6 +4,7 @@ import Login from "@/components/login/login.vue"
 import Order from "@/components/order/order.vue"
 import Goods from "@/components/goods/Goods.vue"
 import AddGood from "@/components/goods/AddGood.vue"
+import GoodCateGory from "@/components/goods/GoodCategory.vue"
 import Store from "@/tools/Stroage"
 import { ElMessage } from "element-plus";
 
@@ -34,6 +35,11 @@ const Router = createRouter({
                     path: "addGood/:type",
                     component: AddGood,
                     name: "AddGood"
+                },
+                {
+                    path: "category",
+                    component: GoodCateGory,
+                    name: "GoodCateGory"
                 }
             ],
             redirect: "/home/order/0"

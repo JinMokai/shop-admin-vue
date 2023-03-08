@@ -10,15 +10,15 @@
             </el-container>
             <el-menu :default-active="$route.path" style="height:100%" background-color="#545c64" text-color="#fff"
                 active-text-color="#ffd04b" @select="selectItem">
-                <el-submenu index="1">
+                <el-sub-menu index="1">
                     <template #title>
                         <i class="el-icon-s-order"></i>
                         <span>订单管理</span>
                     </template>
                     <el-menu-item index="/home/order/0">普通订单</el-menu-item>
                     <el-menu-item index="/home/order/1">秒杀订单</el-menu-item>
-                </el-submenu>
-                <el-submenu index="2">
+                </el-sub-menu>
+                <el-sub-menu index="2">
                     <template #title>
                         <i class="el-icon-s-shop"></i>
                         <span>商品管理</span>
@@ -27,8 +27,8 @@
                     <el-menu-item index="/home/goods/1">秒杀商品</el-menu-item>
                     <el-menu-item index="/home/goods/2">今日推荐</el-menu-item>
                     <el-menu-item index="/home/category">商品分类</el-menu-item>
-                </el-submenu>
-                <el-submenu index="3">
+                </el-sub-menu>
+                <el-sub-menu index="3">
                     <template #title>
                         <i class="el-icon-s-custom"></i>
                         <span>店长管理</span>
@@ -36,22 +36,22 @@
                     <el-menu-item index="/home/ownerlist">店长列表</el-menu-item>
                     <el-menu-item index="/home/ownerreq">店长申请审批列表</el-menu-item>
                     <el-menu-item index="/home/ownerorder">店长订单</el-menu-item>
-                </el-submenu>
-                <el-submenu index="4">
+                </el-sub-menu>
+                <el-sub-menu index="4">
                     <template #title>
                         <i class="el-icon-s-ticket"></i>
                         <span>财务管理</span>
                     </template>
                     <el-menu-item index="/home/tradeinfo">交易明细</el-menu-item>
                     <el-menu-item index="/home/tradelist">财务对账单</el-menu-item>
-                </el-submenu>
-                <el-submenu index="5">
+                </el-sub-menu>
+                <el-sub-menu index="5">
                     <template #title>
                         <i class="el-icon-s-tools"></i>
                         <span>基础管理</span>
                     </template>
                     <el-menu-item index="/home/data">数据统计</el-menu-item>
-                </el-submenu>
+                </el-sub-menu>
             </el-menu>
         </el-aside>
         <el-main style="padding:0">
@@ -79,6 +79,9 @@ export default {
         logout() {
             Storage.commit("clearUserInfo");
             this.$router.push({ name: "login" })
+        },
+        selectItem(index) {
+            this.$router.push(index)
         }
     }
 }
