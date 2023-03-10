@@ -80,25 +80,25 @@
                 </el-table-column>
                 <el-table-column label="分销信息" width="100">
                     <template #default="scope">
-                        <el-tag size="medium" :type="scope.row.role ? '' : 'info'">{{ scope.row.role ? '经理' : '分销员'
+                        <el-tag size="default" :type="scope.row.role ? '' : 'info'">{{ scope.row.role ? '经理' : '分销员'
                         }}</el-tag>
                     </template>
                 </el-table-column>
                 <el-table-column label="状态" width="100">
                     <template #default="scope">
-                        <el-tag size="medium" :type="scope.row.state ? 'success' : 'danger'">{{ scope.row.state ? '已完成' :
+                        <el-tag size="default" :type="scope.row.state ? 'success' : 'danger'">{{ scope.row.state ? '已完成' :
                             '未完成' }}</el-tag>
                     </template>
                 </el-table-column>
                 <el-table-column label="操作" width="200">
                     <template #default="scope">
-                        <el-button size="mini" type="danger" @click="deleteItem(scope.$index)">删除</el-button>
-                        <el-button size="mini" type="primary" @click="callUser(scope.row)">联系客户</el-button>
+                        <el-button size="small" type="danger" @click="deleteItem(scope.$index)">删除</el-button>
+                        <el-button size="small" type="primary" @click="callUser(scope.row)">联系客户</el-button>
                     </template>
                 </el-table-column>
                 <el-table-column label="支付方式" width="100">
                     <template #default="scope">
-                        <el-tag size="medium">{{ scope.row.payType ? '微信' : '支付宝' }}</el-tag>
+                        <el-tag size="default">{{ scope.row.payType ? '微信' : '支付宝' }}</el-tag>
                     </template>
                 </el-table-column>
                 <el-table-column label="来源" width="200" prop="source">
@@ -198,6 +198,9 @@ export default {
                 type: "success",
                 message: "联系客户" + item.phone
             })
+        },
+        exportDispatchGoods() {
+            console.log("下载批量发货样单--暂时不做")
         }
     }
 }

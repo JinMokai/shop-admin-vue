@@ -54,7 +54,7 @@
                 </el-select>
             </div>
             <div style="margin-top:6px">
-                <el-button type="primary" size="mini" round @click="addCategory">添加分类</el-button>
+                <el-button type="primary" size="small" round @click="addCategory">添加分类</el-button>
             </div>
         </el-container>
         <el-container class="content-row">
